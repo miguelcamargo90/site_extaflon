@@ -19,6 +19,7 @@
     "which": "^3.0.1",
     "yarn": "^1.22.19"
   },
+  "homepage": "https://extraflon.com.br",
   "scripts": {
     "start": "craco start",
     "build": "craco build",
