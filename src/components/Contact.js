@@ -76,6 +76,9 @@ export default function Contact() {
                 <p className="text-white text-lg">E-Mail</p>
               </a>
             </div>
+            <p className="text-white text-sm mt-4">
+            Desenvolvido por Miguel Camargo - Desenvolvedor Web e Sistemas
+            </p>
           </div>
         </div>
       </div>
