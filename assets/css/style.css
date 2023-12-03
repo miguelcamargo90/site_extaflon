@@ -1,0 +1,65 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-blend-mode: overlay;
+  background-attachment: fixed; /* Garante que o fundo permaneça fixo ao rolar a página */
+}
+
+.service-image {
+    width: 100%;
+    object-fit: cover;
+    transition: 0.3s; 
+} 
+
+.segment img { /* Adjusted images in the services section */
+    width: 100%;
+    object-fit: cover;
+}
+
+.service-item:hover .service-image {
+    filter: brightness(50%);
+}
+
+form input[type="submit"] {
+    background-color: #FFDF00;
+    border: none;
+    color: #2E5B4E;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #FFA500;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* WhatsApp Icon */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.whatsapp-icon img {
+    width: 54px;
+    height: 54px;
+    margin-right: 10px;
+}
