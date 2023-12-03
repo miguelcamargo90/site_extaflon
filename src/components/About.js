@@ -19,15 +19,15 @@ export default function About() {
       <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
         
         {/* Vídeo à esquerda com moldura e tamanho ajustado */}
-        <div className="md:w-2/5 w-3/4 mb-10 md:mb-0">
-          <div className="border-2 border-white rounded-lg overflow-hidden">
+        <div className="md:w-2/5 w-full mb-10 md:mb-0">
+          <div className="overflow-hidden">
             <video
               src={videoFile}
               autoPlay
               loop
               muted
               playsInline
-              className="w-full"
+              className="w-full h-auto" // Ajuste a classe aqui para tornar o vídeo responsivo em largura
             />
           </div>
         </div>
