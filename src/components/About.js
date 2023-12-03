@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ThumbUpIcon, PrinterIcon } from "@heroicons/react/solid";
-import videoFile from "../images/video.mp4"; // Importa o vídeo a partir do sistema de módulos
+import videoFile from "../images/video.mpeg"; // Importa o vídeo a partir do sistema de módulos
 
 export default function About() {
   const { hash } = useLocation();
