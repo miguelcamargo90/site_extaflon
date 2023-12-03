@@ -30,8 +30,8 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "autoprefixer": "^9.8.6",
-    "postcss": "^latest",
+    "autoprefixer": "^10.0.2",
+    "postcss": "^8.4.32",
     "tailwindcss": "^2.2.19"
   },
   "craco": {
