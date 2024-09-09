@@ -40,7 +40,7 @@ export default function FloatingLogo() {
         }}
       />
       <div style={speechBubbleStyle}>
-        <p style={textStyle}>Como a ExtraFlon pode te ajudar?</p>
+        <p style={textStyle}>Como posso te ajudar?</p>
       </div>
     </div>
   );

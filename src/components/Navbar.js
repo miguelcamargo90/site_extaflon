@@ -16,34 +16,36 @@ export default function Navbar() {
   }, [hash]);
 
   const buttonStyle = "inline-block mr-5 px-3 py-2 rounded font-bold text-white bg-green-600 hover:bg-green-700 transition duration-300";
-  const extraflonButtonStyle = "inline-flex items-center text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2";
+  const extraflonButtonStyle = "inline-flex items-center text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-bold rounded-lg text-sm px-5 py-2.5 text-center mr-3 mb-2";
 
   return (
-    <header className="bg-white md:sticky top-0 z-10 shadow-md">
-      <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-      <button onClick={() => setMenuOpen(!isMenuOpen)} className="md:hidden">
-        <span className="bg-gray-900 w-6 h-1 block mb-1"></span>
-        <span className="bg-gray-900 w-6 h-1 block mb-1"></span>
-        <span className="bg-gray-900 w-6 h-1 block"></span>
-      </button>
-        <Link to="/">
-          <img src={logo} alt="Logo" className="w-40 h-50" />
+    <nav className="fixed top-0 w-full z-50 bg-white shadow-md py-2">
+      <div className="container mx-auto flex justify-between items-center px-4">
+        <Link to="/" className="flex items-center">
+          <img src={logo} alt="Logo" className="h-10 md:h-8" />
         </Link>
-        <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 flex flex-wrap items-center text-base justify-center md:flex">
-          <Link to="/#about" className={buttonStyle}>Sobre Nós</Link>
-          <Link to="/#projects" className={buttonStyle}>Serviços & Soluções</Link>
-          <Link to="/#products" className={buttonStyle}>Produtos</Link>
-          <a href="/experiences" className={extraflonButtonStyle}>
-            <FaImages className="mr-2"/>
-            EXTRAFLON EXPERIENCE
-          </a>
-        </nav>
-        <TypingEffect text="Revestimentos & Produtos em PTFE" speed={150} className="text-green-600 font-bold mx-auto" />
-        <Link to="/#contact" className="inline-flex flex-col items-center bg-green-600 border-0 py-2 px-4 focus:outline-none hover:bg-green-500 rounded text-base mt-4 md:mt-0 text-white">
-          <FaWhatsapp className="w-10 h-10" />
-          <span>Fale Conosco</span>
-        </Link>
+        <div className="hidden md:flex space-x-4">
+          <Link to="/about" className="text-sm text-gray-700 hover:text-blue-500">Sobre</Link>
+          <Link to="/products" className="text-sm text-gray-700 hover:text-blue-500">Produtos</Link>
+          <Link to="/projects" className="text-sm text-gray-700 hover:text-blue-500">Projetos</Link>
+          <Link to="/contact" className="text-sm text-gray-700 hover:text-blue-500">Contato</Link>
+        </div>
+        <div className="md:hidden">
+          <button onClick={() => setMenuOpen(!isMenuOpen)} className="text-gray-700 focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-6 w-6">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+        </div>
       </div>
-    </header>
+      {isMenuOpen && (
+        <div className="md:hidden bg-white py-2">
+          <Link to="/about" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sobre</Link>
+          <Link to="/products" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Produtos</Link>
+          <Link to="/projects" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Projetos</Link>
+          <Link to="/contact" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Contato</Link>
+        </div>
+      )}
+    </nav>
   );
 }
