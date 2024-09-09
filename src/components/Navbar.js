@@ -19,16 +19,16 @@ export default function Navbar() {
   const extraflonButtonStyle = "inline-flex items-center text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-bold rounded-lg text-sm px-5 py-2.5 text-center mr-3 mb-2";
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white shadow-md py-2">
+    <nav className="fixed top-0 w-full z-50 bg-white shadow-md py-2 md:py-4">
       <div className="container mx-auto flex justify-between items-center px-4">
         <Link to="/" className="flex items-center">
-          <img src={logo} alt="Logo" className="h-10 md:h-8" />
+          <img src={logo} alt="Logo" className="h-10 md:h-12 lg:h-16" />
         </Link>
-        <div className="hidden md:flex space-x-4">
-          <Link to="/about" className="text-sm text-gray-700 hover:text-blue-500">Sobre</Link>
-          <Link to="/products" className="text-sm text-gray-700 hover:text-blue-500">Produtos</Link>
-          <Link to="/projects" className="text-sm text-gray-700 hover:text-blue-500">Projetos</Link>
-          <Link to="/contact" className="text-sm text-gray-700 hover:text-blue-500">Contato</Link>
+        <div className="hidden md:flex space-x-6">
+          <Link to="/about" className="text-base text-gray-700 hover:text-blue-500">Sobre</Link>
+          <Link to="/products" className="text-base text-gray-700 hover:text-blue-500">Produtos</Link>
+          <Link to="/projects" className="text-base text-gray-700 hover:text-blue-500">Projetos</Link>
+          <Link to="/contact" className="text-base text-gray-700 hover:text-blue-500">Contato</Link>
         </div>
         <div className="md:hidden">
           <button onClick={() => setMenuOpen(!isMenuOpen)} className="text-gray-700 focus:outline-none">
